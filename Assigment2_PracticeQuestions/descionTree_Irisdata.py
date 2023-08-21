@@ -1,19 +1,30 @@
-from sklearn import tree
-from sklearn.datasets import load_iris
+
+from sklearn.datasets import load_breast_cancer
+from sklearn.metrics import accuracy_score
+from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
-from  sklearn.tree import export_text
 
-from SclearnDatasetIris import iris
 
-iris_dataset=load_iris()
+brestCancer_dataset=load_breast_cancer()
 
-descion_tree=DecisionTreeClassifier(random_state=0,max_depth=2)
-descion_tree=descion_tree.fit(iris.data,iris.target)
-r=export_text(descion_tree,feature_names=iris["feature_names"])
-print(r)
 
-X = [[0, 0], [2, 2]]
-y = [0.5, 2.5]
-clf = tree.DecisionTreeRegressor()
-clf = clf.fit(X, y)
-clf.predict([[1, 1]])
+# Extracting Attribute
+X=brestCancer_dataset.data
+
+# Extracting Target / Class Labels
+Y=brestCancer_dataset.target
+
+# Train data
+X_train, X_test, y_train, y_test = train_test_split(X,Y, random_state = 50, test_size = 0.25)
+
+# Creating Decision Tree Classifier
+
+clf = DecisionTreeClassifier()
+clf.fit(X_train,y_train)
+
+
+
+# Predict Accuracy Score
+y_pred = clf.predict(X_test)
+print("Train data accuracy:",accuracy_score(y_true = y_train, y_pred=clf.predict(X_train)))
+print("Test data accuracy:",accuracy_score(y_true = y_test, y_pred=y_pred))
