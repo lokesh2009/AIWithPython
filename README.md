@@ -5,3 +5,6 @@ There were certain stages of Data Science, and for those stages, we have an assi
 
 Assignment 1 :
 ![Assigment1](https://github.com/lokesh2009/AIWithPython/assets/31234433/14bd928e-815a-498f-8a9f-47377005077e)
+
+Assignment2
+![image](https://github.com/lokesh2009/AIWithPython/assets/31234433/0519a7f3-d133-476c-9f57-737f6573bf4b)
