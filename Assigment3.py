@@ -2,16 +2,20 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Define the data
-input=np.array([[7,4,3],
-                [4,1,8],
-                [6,3,5],
-                [8,6,1],
-                [8,5,7],
-                [7,2,9],
-                [5,3,3],
-                [9,5,8],
-                [7,4,5],
-                [8,2,2]])
+input = np.array(
+    [
+        [7, 4, 3],
+        [4, 1, 8],
+        [6, 3, 5],
+        [8, 6, 1],
+        [8, 5, 7],
+        [7, 2, 9],
+        [5, 3, 3],
+        [9, 5, 8],
+        [7, 4, 5],
+        [8, 2, 2],
+    ]
+)
 
 # Standardize the data
 mean = np.mean(input, axis=0)
@@ -20,7 +24,6 @@ data_std = (input - mean) / std_dev
 
 # Calculate the covariance matrix
 cov_matrix = np.cov(data_std, rowvar=False)
-
 # Calculate eigenvalues and eigenvectors
 eigenvalues, eigenvectors = np.linalg.eig(cov_matrix)
 
@@ -38,7 +41,7 @@ data_pca = np.dot(data_std, top_eigenvectors)
 
 # Visualize the reduced-dimensional data using Matplotlib
 plt.scatter(data_pca[:, 0], data_pca[:, 1])
-plt.xlabel('Principal Component 1')
-plt.ylabel('Principal Component 2')
-plt.title('PCA Result')
+plt.xlabel("Principal Component 1")
+plt.ylabel("Principal Component 2")
+plt.title("PCA Result")
 plt.show()
