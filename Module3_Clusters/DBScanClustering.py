@@ -1,7 +1,4 @@
-import numpy as np
-from sklearn import  metrics
 from sklearn.datasets import  make_blobs
-from sklearn.preprocessing import StandardScaler
 
 # Generate sample data
 centers =[[1,1],[-1,-1],[1,-1]]

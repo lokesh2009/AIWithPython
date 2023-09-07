@@ -1,6 +1,7 @@
 from sklearn.datasets import load_wine
-from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
+from sklearn.model_selection import train_test_split
+
 dataset=load_wine
 print(dataset.shape)
 

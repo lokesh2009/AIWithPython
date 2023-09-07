@@ -1,5 +1,6 @@
-import numpy as np
 import matplotlib.pyplot as plt
+import numpy as np
+
 input=np.array([[7,4,3],
                 [4,1,8],
                 [6,3,5],

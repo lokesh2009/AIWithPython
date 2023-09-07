@@ -1,8 +1,6 @@
-import numpy as np
-import pandas as pd
-from sklearn.datasets import make_blobs
-from sklearn.cluster import KMeans
 import matplotlib as plt
+from sklearn.cluster import KMeans
+from sklearn.datasets import make_blobs
 
 # create blobs
 data = make_blobs(

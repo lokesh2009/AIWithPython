@@ -1,9 +1,5 @@
-from sklearn.datasets import l
-import matplotlib as plt
 import numpy as np
 import  skfuzzy as fuzz
-from skfuzzy import control as ctrl
-
 
 np.random.seed(0)
 data=np.random.rand(100,2)
