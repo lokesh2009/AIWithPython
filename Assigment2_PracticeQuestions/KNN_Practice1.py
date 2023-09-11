@@ -37,20 +37,23 @@ from sklearn.neighbors import KNeighborsClassifier
 
 # Breast cancer related data
 
-df = pd.read_csv("/Users/lokeshsharma/Desktop/pythonProject/AIWithPython/TestData/sih.csv")
+df = pd.read_csv(
+    "/Users/lokeshsharma/Desktop/pythonProject/AIWithPython/TestData/sih.csv"
+)
 print(df.shape)
 
-X_train,X_test,y_train,y_test=train_test_split(df.iloc[:,1],df.iloc[:,0],test_size=.2,random_state=2)
+X_train, X_test, y_train, y_test = train_test_split(
+    df.iloc[:, 1], df.iloc[:, 0], test_size=0.2, random_state=2
+)
 X_train.head
 X_train.shape
-print("Xtrain shape",X_test.shape)
+print("Xtrain shape", X_test.shape)
 
 
-#Apply KNN algo
+# Apply KNN algo
 knn = KNeighborsClassifier(n_neighbors=5)
-knn.fit(X_train,y_train)
+knn.fit(X_train, y_train)
 
 # Predict
-y_prid=knn.predict(X_test)
-accuracy_score(y_test,y_pred=2)
-
+y_prid = knn.predict(X_test)
+accuracy_score(y_test, y_pred=2)

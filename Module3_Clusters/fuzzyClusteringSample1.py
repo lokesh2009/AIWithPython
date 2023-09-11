@@ -1,16 +1,18 @@
 import numpy as np
-import  skfuzzy as fuzz
+import skfuzzy as fuzz
 
 np.random.seed(0)
-data=np.random.rand(100,2)
+data = np.random.rand(100, 2)
 
-#develop clustering
-n_clusters=3
+# develop clustering
+n_clusters = 3
 
-cntr,u,u0,d,jm,p,fpc=fuzz.cluster.cmeans(data.T,n_clusters,2,error=0.005,maxiter=1000,init=None)
-cluster_membership=np.argmax(u,axis=0)
-print('Cluster centers',cntr)
+cntr, u, u0, d, jm, p, fpc = fuzz.cluster.cmeans(
+    data.T, n_clusters, 2, error=0.005, maxiter=1000, init=None
+)
+cluster_membership = np.argmax(u, axis=0)
+print("Cluster centers", cntr)
 
-print('Cluster Membership')
+print("Cluster Membership")
 
-print('cluster membership',cluster_membership)
+print("cluster membership", cluster_membership)
