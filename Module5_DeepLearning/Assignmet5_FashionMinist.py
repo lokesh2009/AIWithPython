@@ -78,7 +78,6 @@ model.compile(optimizer=Adam(learning_rate=1e-3),
 model.summary()
 
 history = model.fit(
-	trainX.astype(np.float32), trainy.astype(np.float32),
 	epochs=10,
 	steps_per_epoch=100,
 	validation_split=0.33
