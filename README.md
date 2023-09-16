@@ -9,3 +9,11 @@ Assignment 1 :
 Assignment2
 ![image](https://github.com/lokesh2009/AIWithPython/assets/31234433/915621d2-7e39-45e7-8596-5e3a435d79fe)
 
+Day15-Module 3: Assignment
+For a chosen datasets, perform any two clustering algorithm. Also Compare & comment on its performance. 
+
+Assignment 4
+Write the python program to train a two input and two output neural network using back propagation algorithm.
+
+DAy24Assignment 5
+Implementation of CNN for chosen Data sets
